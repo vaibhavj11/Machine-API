@@ -11,7 +11,12 @@ jobs:
       - image: cimg/openjdk:23.0.2
      steps:
       - checkout
-      - run: java --version
+      - run: 
+          name: Install Dependencies
+          command: apt get install mvn
+      - run:
+          name: Check Version
+          command: mvn --version
 
 
 
