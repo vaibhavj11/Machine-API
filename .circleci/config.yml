@@ -7,8 +7,6 @@ workflows:
 
 jobs:
   test:
-    jobs:
-  build:
     docker:
       - image: cimg/openjdk:23.0.2
     steps:
