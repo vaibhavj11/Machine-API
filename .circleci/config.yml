@@ -13,10 +13,11 @@ jobs:
       - checkout
       - run: 
           name: Install Dependencies
-          command: apt get install mvn
-      - run:
+          command: apt-get update && apt-get install -y maven
+      - run: 
           name: Check Version
           command: mvn --version
+      
 
 
 
