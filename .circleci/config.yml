@@ -7,9 +7,9 @@ workflows:
 
 jobs:
   test:
-     docker:
+    docker:
       - image: cimg/openjdk:23.0.2
-     steps:
+    steps:
       - checkout
       - run: 
           name: Install Dependencies
