@@ -14,3 +14,14 @@ workflows:
   test-deploy:
     jobs:
       - test
+  schedule-workflow:
+    triggers:
+      - schedule:
+          cron: "0 *"
+          filters:
+            branches:
+              only:
+                - master
+
+    jobs:
+      - test
