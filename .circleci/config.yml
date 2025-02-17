@@ -1,9 +1,5 @@
 version: 2.1
 
-workflows:
-  test-deploy:
-    jobs:
-      - test
 
 jobs:
   test:
@@ -12,3 +8,9 @@ jobs:
     steps:
       - checkout
       - run: java --version
+
+
+workflows:
+  test-deploy:
+    jobs:
+      - test
